@@ -74,4 +74,13 @@ runClassifier.trainTestSet(knn.KNN({'isKNN': False, 'eps': 10.0}), datasets.Digi
 runClassifier.trainTestSet(knn.KNN({'isKNN': True, 'K': 1}), datasets.DigitData)
 runClassifier.trainTestSet(knn.KNN({'isKNN': True, 'K': 3}), datasets.DigitData)
 runClassifier.trainTestSet(knn.KNN({'isKNN': True, 'K': 5}), datasets.DigitData)
+
+runClassifier.plotData(datasets.TwoDDiagonal.X, datasets.TwoDDiagonal.Y)
+h = perceptron.Perceptron({'numEpoch': 200})
+h.train(datasets.TwoDDiagonal.X, datasets.TwoDDiagonal.Y)
+print(h)
+runClassifier.plotClassifier(array([ 7.3, 18.9]), 0.0)
+
+runClassifier.trainTestSet(perceptron.Perceptron({'numEpoch': 1}), datasets.SentimentData)
+runClassifier.trainTestSet(perceptron.Perceptron({'numEpoch': 2}), datasets.SentimentData)
 """
