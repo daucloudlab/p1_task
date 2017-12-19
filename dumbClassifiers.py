@@ -118,7 +118,7 @@ class FirstFeatureClassifier(BinaryClassifier):
         ### TODO: YOUR CODE HERE
         # util.raiseNotDefined()
         t = X[:, 0]
-        print (t)
+        # print (t)
         when_x_positiv = 0
         when_x_negative = 0
         index = 0
