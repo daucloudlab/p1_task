@@ -1,5 +1,5 @@
 from numpy import *
 from pylab import *
 from util import *
-import datasets,binary,dumbClassifiers,runClassifier, dt
+import datasets,binary,dumbClassifiers,runClassifier, dt, knn
 
