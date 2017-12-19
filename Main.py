@@ -1,7 +1,7 @@
 from imports import *
 
 """
-Первое задание
+#Первое задание
 
 h = dumbClassifiers.AlwaysPredictOne({})
 print(h)
@@ -26,38 +26,7 @@ print(runClassifier.trainTestSet(dumbClassifiers.FirstFeatureClassifier({}), dat
 """
 
 """
-Второе задание Decision Tree
-
-h = dt.DT({'maxDepth': 1})
-print(h)
-
-h.train(datasets.TennisData.X, datasets.TennisData.Y)
-print(h)
-
-h = dt.DT({'maxDepth': 2})
-h.train(datasets.TennisData.X, datasets.TennisData.Y)
-print(h)
-
-h = dt.DT({'maxDepth': 5})
-h.train(datasets.TennisData.X, datasets.TennisData.Y)
-print(h)
-
-h = dt.DT({'maxDepth': 2})
-h.train(datasets.SentimentData.X, datasets.SentimentData.Y)
-print(h)
-
-print(datasets.SentimentData.words[626])
-print(datasets.SentimentData.words[683])
-print(datasets.SentimentData.words[1139])
-
-runClassifier.trainTestSet(dt.DT({'maxDepth': 1}), datasets.SentimentData)
-runClassifier.trainTestSet(dt.DT({'maxDepth': 3}), datasets.SentimentData)
-runClassifier.trainTestSet(dt.DT({'maxDepth': 5}), datasets.SentimentData)
-
-# curve = runClassifier.learningCurveSet(dt.DT({'maxDepth': 9}), datasets.SentimentData)
-##curve = runClassifier.hyperparamCurveSet(dt.DT({}), 'maxDepth', [1,2,4,6,8,12,16], datasets.SentimentData)
-##runClassifier.plotCurve('DT on Sentiment Data (hyperparameter)', curve)
-
+#Третье задание knn
 
 runClassifier.trainTestSet(knn.KNN({'isKNN': False, 'eps': 0.5}), datasets.TennisData)
 runClassifier.trainTestSet(knn.KNN({'isKNN': False, 'eps': 1.0}), datasets.TennisData)
@@ -75,6 +44,16 @@ runClassifier.trainTestSet(knn.KNN({'isKNN': True, 'K': 1}), datasets.DigitData)
 runClassifier.trainTestSet(knn.KNN({'isKNN': True, 'K': 3}), datasets.DigitData)
 runClassifier.trainTestSet(knn.KNN({'isKNN': True, 'K': 5}), datasets.DigitData)
 
+# learningCurve = runClassifier.learningCurveSet(knn.KNN({'isKNN':True, 'K':5}), datasets.DigitData)
+# runClassifier.plotCurve('KNN on AI: K=5', learningCurve)
+# learningCurveEps = runClassifier.learningCurveSet(knn.KNN({'isKNN':False, 'eps':5}), datasets.DigitData)
+# runClassifier.plotCurve('KNN on Eps: Eps=5', learningCurveEps)
+"""
+
+
+"""
+# Четвертое задание perceptron
+
 runClassifier.plotData(datasets.TwoDDiagonal.X, datasets.TwoDDiagonal.Y)
 h = perceptron.Perceptron({'numEpoch': 200})
 h.train(datasets.TwoDDiagonal.X, datasets.TwoDDiagonal.Y)
@@ -83,4 +62,6 @@ runClassifier.plotClassifier(array([ 7.3, 18.9]), 0.0)
 
 runClassifier.trainTestSet(perceptron.Perceptron({'numEpoch': 1}), datasets.SentimentData)
 runClassifier.trainTestSet(perceptron.Perceptron({'numEpoch': 2}), datasets.SentimentData)
+
 """
+
