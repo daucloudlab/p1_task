@@ -71,9 +71,7 @@ class KNN(BinaryClassifier):
             dist = sqrt(((X - self.trX) ** 2).sum(axis=1))
             # сортируется массив и возвращается индексы
             disti_sorted = argsort(dist)
-            # take the first K indices, get their Y value and take the mode
-            val = util.mode(self.trY[disti_sorted[0:K]]);
-            return val
+            return self.trY[disti_sorted[0:K]].sum()
         else:
             # this is an epsilon ball model
             eps = self.opts['eps']     # how big is our epsilon ball
@@ -81,13 +79,9 @@ class KNN(BinaryClassifier):
             val = 0                    # this is our return value: #pos - #neg within and epsilon ball of X
             ### TODO: YOUR CODE HERE
             # util.raiseNotDefined()
-            # get the euc distance of X to everything else.
-            dist = sqrt(((X - self.trX) ** 2).sum(axis=1))
-            # get the index of all pts that's within the eps ball
-            withinEpsY = self.trY[dist <= eps];
 
-            val = util.mode(withinEpsY);
-            return val
+            dist = sqrt(((X - self.trX) ** 2).sum(axis=1))
+            return self.trY[dist <= eps].sum() ;
                 
             
 

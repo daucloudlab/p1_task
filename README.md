@@ -352,7 +352,7 @@ You can also try it on the digits data:
 
 ```python
 >>> runClassifier.trainTestSet(knn.KNN({'isKNN': False, 'eps': 6.0}), datasets.DigitData)
-Training accuracy 0.96, test accuracy 0.64
+Training accuracy 0.self.trY[disti_sorted[0:K]].sum()96, test accuracy 0.64
 >>> runClassifier.trainTestSet(knn.KNN({'isKNN': False, 'eps': 8.0}), datasets.DigitData)
 Training accuracy 0.88, test accuracy 0.81
 >>> runClassifier.trainTestSet(knn.KNN({'isKNN': False, 'eps': 10.0}), datasets.DigitData)
